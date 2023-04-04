@@ -1,4 +1,5 @@
-import 'package:bio_screan/bio_Screan.dart';
+import 'package:bio_screan/Screans/bio_Screan.dart';
+import 'package:bio_screan/Screans/launch_screan.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:BioScrean() ,
+     initialRoute: '/launch_Screen' ,
+      routes: {
+         '/launch_Screen' :(context)=>   LaunchScrean(),
+        '/bio_Screen' : (context) => BioScrean()
+
+      },
     );
   }
 }
